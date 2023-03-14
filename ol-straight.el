@@ -1,4 +1,4 @@
-;;; ol-straight.el --- Link to straight package website -*- lexical-binding: t; -*-
+;;; ol-straight.el --- Create links to package homepage -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2023 Roni Kallio
 ;; Author: Roni Kallio <roni.jj.kallio@gmail.com>
@@ -20,6 +20,14 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 ;;
 ;;; Commentary:
+;;
+;; Inside org mode buffers, create straight -type links with
+;; autocompletion using `org-insert-link'.  Open the linked package's
+;; repository URL with `org-open-at-point'.
+;;
+;; When exporting, links are converted into HTTPS type links.
+;; Currently supported org-export back ends are html, latex, texino,
+;; ascii, and md.
 ;;
 ;;; Code:
 

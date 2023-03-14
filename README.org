@@ -1,15 +1,25 @@
 * Overview
 
-ol-straight implements the org links[fn:1] API for the straight package manager.  Create an autocompleted =straight= link with =org-insert-link=[fn:2], and =org-open-at-point=[fn:3] will take you straight to the package's home page.  Exporting the org file will insert the package's homepage in to the exported document.
+ol-straight implements the org links[fn:1] API for the straight[fn:2] package manager.  Create an autocompleted =straight= -type link with =org-insert-link=[fn:3], and =org-open-at-point=[fn:4] will take you straight to the package's home page.  Exporting the org file will insert the referenced package's homepage URL straight in to the exported document.
 
 * Installing
 
-Clone the repository, add =ol-straight.el= to your load path, and require it.
+Clone the repository, add =ol-straight.el= to your load path, and require it.  Or use straight:
+
+#+begin_src emacs-lisp
+(straight-use-package
+ '(ol-straight :host github :repo "rkallio/ol-straight"))
+
+(with-eval-after-load 'ol
+  (require 'ol-straight))
+#+end_src
 
 * Footnotes
 
 [fn:1] [[https://orgmode.org/manual/Handling-Links.html]]
 
-[fn:2] Default key binding =C-c C-l=
+[fn:2] [[https://github.com/radian-software/straight.el]]
 
-[fn:3] Default key binding =C-c C-o=
+[fn:3] Default key binding =C-c C-l=
+
+[fn:4] Default key binding =C-c C-o=
