@@ -32,7 +32,6 @@
 ;;; Code:
 
 (require 'org-macs)
-(org-assert-version)
 
 (require 'ol)
 (require 'straight)
